@@ -26,6 +26,7 @@ titles:
 key: page-about
 ---
 
-## ziliuziliu
-
-## Shanghai Jiao Tong University
+ziliuziliu
+- UnderGraduate of SJTU-SE
+- Gamer
+- Still Single...😉
