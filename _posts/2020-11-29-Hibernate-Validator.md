@@ -9,11 +9,87 @@ tags: Articles
 ![avatar](https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/html_single/images/application-layers.png)
 - Validation code is really metadata of a class itself. Instead of bundle validation directly to code, we use **Annotations**.
 ![avatar](https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/html_single/images/application-layers2.png)
-
 ## 2. Dependencies
-- Hibernate-Validator is included in spring-boot-starter-web.
-
-## 3. Declaring and Validating Bean Constraints
-
+```xml
+<dependency>
+    <groupId>org.hibernate.validator</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>7.0.0.Alpha6</version>
+</dependency>
+```
+## 3. Declaring Bean Constraints
 ### 3.1 Field-level
-
+```java
+    @NotNull
+    private String manufacturer;
+    @AssertTrue
+    private boolean isRegistered;
+```
+### 3.2 Property-level
+- Only ***getter*** method can be annotated. Choose either field or property for annotation, not both.
+```java
+    @NotNull
+    public String getManufacturer() {
+        return manufacturer;
+    }
+```
+### 3.3 Container Elements
+- For List, Map, Set, Iterable things...
+```java
+    private Map<@NotNull FuelConsumption, @MaxAllowedFuelConsumption Integer> fuelConsumption = new HashMap<>();
+```
+### 3.4 Class-level
+```java
+@ValidPassengerCount
+public class Car {
+    private int seatCount;
+    private List<Person> passengers;
+}
+```
+## 4. Declaring Method Constraints
+### 4.1 Parameter
+```java
+    public void rentCar(
+            @NotNull Customer customer,
+            @NotNull @Future Date startDate,
+            @Min(1) int durationInDays) {
+        //...
+    }
+```
+### 4.2 Return Value
+```java
+    @NotNull
+    @Size(min = 1)
+    public List<@NotNull Customer> getCustomers() {
+        //...
+        return null;
+    }
+```
+## 5. Common Annotations
+- @Null, @NotNull, @AssertTrue, @AssertFalse
+- @Min(value), @Max(value), @DecimalMin(value), @DecimalMax(value)
+- @Past, @Future
+- @Email
+- @Pattern(regex)
+- @Length(min,max), @Range(min,max)
+## 6. Validating
+### 6.1 Validating Bean Constraints
+- Obtaining a ***Validator*** instance.
+```java
+    ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+    validator = factory.getValidator();
+```
+- Validate: use the ***validate()*** method to perform validation. It returns a ***Set\<ConstraintViolation>***, for each violation it add a ***ConstraintViolation***.
+```java
+    Car car = new Car( null, true );
+    Set<ConstraintViolation<Car>> constraintViolations = validator.validate( car );
+    assertEquals( 1, constraintViolations.size() );
+    assertEquals( "must not be null", constraintViolations.iterator().next().getMessage() );
+```
+### 6.2 Validating Method Constraints
+- Obtaining a ***ExecutableValidator*** instance.
+- Validate: use ***validateParameters()*** and ***validateReturnValue()***.
+## 7. Integration With Springboot Controller
+//TODO
+## 8. It's ... not that juicy.
+//TODO
