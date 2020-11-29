@@ -10,7 +10,7 @@ tags: Articles
 - Validation code is really metadata of a class itself. Instead of bundle validation directly to code, we use **Annotations**.
 ![avatar](https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/html_single/images/application-layers2.png)
 ## 2. Dependencies
-```
+```java
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-validation</artifactId>
