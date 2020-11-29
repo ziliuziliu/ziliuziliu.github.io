@@ -27,6 +27,6 @@ key: page-about
 ---
 
 ziliuziliu
-- UnderGraduate of SJTU-SE
-- Gamer
+- Undergraduate of Shanghai Jiao Tong University, Software Engineering
+- Gamer (Steam, Epic, Uplay, World of Tanks...)
 - Still Single...😉

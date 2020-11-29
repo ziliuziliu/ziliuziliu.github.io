@@ -10,11 +10,10 @@ tags: Articles
 - Validation code is really metadata of a class itself. Instead of bundle validation directly to code, we use **Annotations**.
 ![avatar](https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/html_single/images/application-layers2.png)
 ## 2. Dependencies
-```xml
+```
 <dependency>
-    <groupId>org.hibernate.validator</groupId>
-    <artifactId>hibernate-validator</artifactId>
-    <version>7.0.0.Alpha6</version>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
 ```
 ## 3. Declaring Bean Constraints
@@ -90,6 +89,36 @@ public class Car {
 - Obtaining a ***ExecutableValidator*** instance.
 - Validate: use ***validateParameters()*** and ***validateReturnValue()***.
 ## 7. Integration With Springboot Controller
-//TODO
-## 8. It's ... not that juicy.
-//TODO
+- It's impossible to totally decouple validation code with bussiness logic. However, it's useful in Springboot Controller: lightweight, minimum modification of code, and maximum effect.
+- ***@Validated*** at the start of controller class.
+### 7.1 @RequestBody
+- Use annotation metioned in part 2. Then:
+```java
+    @PostMapping("/User")
+    public ReturnVO register(@RequestBody @Validated UserDTO userDTO) {...}
+```
+### 7.2 @RequestParam
+```java
+    @RequestMapping("/Register")
+    public ReturnVO register(@Email @RequestParam(name = "email") String email,
+                             @Pattern(regexp = "^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\\d{8}$", message = "205")
+                             @RequestParam(name = "phone") String phone)
+```
+### 7.3 Handle Exception
+- When violating constraint, the hibernate validator throws ***ConstraintViolationException***, which should be processed, and return user-friendly messages. A ***GlobalExceptionHandler*** would do the trick.
+```java
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+    @ExceptionHandler(ConstraintViolationException.class)
+    public Msg<Boolean> handle(ConstraintViolationException e) {
+        Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+        for (ConstraintViolation<?> item : violations) {
+            switch (item.getMessage()) {
+                ...
+            }
+        }
+    }
+}
+```
+## 8. References
+- [Hibernate-Validator-7.0.0.Alpha6-Doc](https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/html_single/#_return_value_constraints)
