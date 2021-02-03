@@ -31,3 +31,38 @@ Serverless in the Wild: Characterizing and Optimizing the Serverless Workload at
 - 90% of the applications never consume more than 400MB. Overall, there is a 4x variation in the first 90% of applications, meaning that memory is an important factor in warmup, allocation, and keep-alive decisions for FaaS.
 ### 3.6 Main Takeaways
 ## 4. Managing Cold Starts in FaaS
+- Hybrid Histogram Policy: reducing the number of cold start invocations with minimum resource waste.
+  - Pre-warming window: the time the policy waits, since the last execution, before it loads the application image expecting the next invocation.
+  - Keep-alive window: the time during which an application's image is kept alive after it has been loaded to memory.
+### 4.1 Design Challenges
+- Hard-to-predict invocations, heterogeneous applications, applications with infrequent invocations(take some time to learn invocation patterns), tracking overhead, execution overhead(no expensive prediction techniques).
+### 4.2 Hybrid Histogram Policy
+- An overivew of policy is shown below. Ultimately, the policy defines the pre-warming and keep-alive windows for each application.
+![avatar](https://raw.githubusercontent.com/ziliuziliu/ziliuziliu.github.io/master/_posts/pic/2021_2_3_1.jpg)
+- ***Range-limited histogram***
+  - A compact histogram data structure that tracks the IT(idle time) distribution. Any ITs longer than 4 hours are considered OOBs(out-of-bounds).
+  - For IT distribution, use head(5%) to select the pre-warming window, use tail(99%) to select keep-alive window.
+- ***Standard keep-alive window when the pattern is uncertain***
+  - The histogram might not be representative of an application's behavior when (1) not enough IT's observed (2) application is transitioning to a different IT regime.
+  - Revert to a standard keep-alive approach: pre-warming window = 0, keep-alive window = 4hour.
+- ***Time-series analysis when histogram is not large enough***
+  - Applications with very infrequent invocations may exhibit many out-of-bounds ITs. For these applications, use time-series analysis(ARIMA modeling) to predict the next IT.
+### 4.3 Implementation in Apache OpenWhisk
+- OpenWhisk architecture
+![avatar](https://raw.githubusercontent.com/ziliuziliu/ziliuziliu.github.io/master/_posts/pic/2021_2_3_1.jpg)
+- Implementing policy:
+  - 1.Add new logic to the Load Balancer to implement the hybrid policy.
+  - 2.Send the latest keep-alive parameter alongside the invocation request.
+  - 3.The invoker unloads Docker containers based on the keep-alive parameter.
+## 5. Evaluation
+### 5.1 Methodology
+### 5.2 Simulation Results
+### 5.3 Experimental Results
+## 6. Production Implementation
+- Updating the in-memory histogram, backing up the histogram to database, scheduling pre-warming events, and controlling the worker's keep alive intervals.
+## 7. Related Work
+- SOCK: optimize the loading of Python functions in OpenLambda by smart caching of sets of libraries, and by using lightweight isolation mechanisms for functions.
+- SAND: use application-level sandboxing to prevent the cold start latency for subsequent function invocations within an application.
+- Replayable Execution: checkpointing and sharing of memory among containers to speed up the startup times of a JVM-based FaaS system.
+- This paper works on reducing the number of cold starts and resource usage by predicting function invocations, which is orthogonal to these improvements.
+## 8. Conclusion
