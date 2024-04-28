@@ -17,16 +17,12 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am now a 2nd year Master student in Computer Science at Shanghai Jiao Tong University. I am also a research assistant at the <a href="http://epcc.sjtu.edu.cn/">Emerging Parallel Computing Center</a>, supervised by <a href="https://www.cs.sjtu.edu.cn/~chen-quan/">Prof. Quan Chen</a>. 
+I am now a 2nd year Master student in Computer Science at Shanghai Jiao Tong University. I am also a research assistant at the <a href="http://epcc.sjtu.edu.cn/">Emerging Parallel Computing Center</a>, supervised by <a href="https://www.cs.sjtu.edu.cn/~chen-quan/">Prof. Quan Chen</a>. Before that, I received my Bachelor degree at Shanghai Jiao Tong University in 2022. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
-
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
-
+My research interest include serverless and its intersection with large-scale data analytics. My research focuses on leveraging the unique attributes of serverless computing - such as fine-grained resource control, pay-per-use billing, and minimal user effort — to develop efficient, scalable, and cost-effective data analytic systems. My recent project, FaaSGraph, introduces serverless paradigm into graph processing systems. This has resulted in significant enhancements in end-to-end performance, memory consumption, and cost efficiency.
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2024.04*: &nbsp; I will be graduating in 2025. Currently I'm looking for Phd positions. If you are interested, please email me.
 
 # 📝 Publications 
 
