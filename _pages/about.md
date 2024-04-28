@@ -57,8 +57,6 @@ My research interest include serverless and its intersection with large-scale da
 <li><div class="pubtitle">ASPLOS 2022</div> &nbsp;<a href="https://dl.acm.org/doi/abs/10.1145/3503222.3507717">FaaSFlow: Enable Efficient Workflow Execution For Function-as-a-Service.</a> Zijun Li, <span class="font-bold">Yushi Liu</span>, Linsong Guo, Quan Chen, Jiagan Cheng, Wenli Zheng, Minyi Guo.</li>
 </ul>
 
-<a href="https://info.flagcounter.com/CGCB"><img src="https://s01.flagcounter.com/count2/CGCB/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-
 # 🎖 Honors and Awards
 - *2019* Endress + Hauser China Scholarship ($700).
 - *2021* SJTU MengjiaChenYue Scholarship ($1100).
@@ -68,6 +66,9 @@ My research interest include serverless and its intersection with large-scale da
 # 📖 Educations
 - *2022.09 - 2025.03*, Master in Computer Science, Shanghai Jiao Tong University.
 - *2018.09 - 2022.06*, Bachelor in Software Engineering, Shanghai Jiao Tong University. 
+
+<hr>
+<a href="https://info.flagcounter.com/CGCB"><img src="https://s01.flagcounter.com/count2/CGCB/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 
 <!-- # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
