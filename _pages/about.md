@@ -8,6 +8,31 @@ redirect_from:
   - /about.html
 ---
 
+<style>
+.pubtitle{
+    background: #BD666D;
+    color: white;
+    font-size: 12px;
+    padding: 1px 5px 1px 5px;
+    border-radius: 15px;
+    float: left;
+    font-weight: bold;
+}
+.awardtitle{
+    color: #BD666D;
+    outline: 2px solid #BD666D;
+    outline-offset: -2px;
+    font-size: 12px;
+    padding: 1px 5px 1px 5px;
+    border-radius: 15px;
+    float: left;
+    font-weight: bold;
+}
+.font-bold{
+    font-weight:bolder;
+}
+</style>
+
 {% if site.google_scholar_stats_use_cdn %}
 {% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
 {% else %}
@@ -27,7 +52,6 @@ My research interest include serverless and its intersection with large-scale da
 
 # 📝 Publications 
 
-</div>
 <ul>
 <li><div class="pubtitle">ASPLOS 2024</div> &nbsp;<a href="https://dl.acm.org/doi/10.1145/3620665.3640361">FaaSGraph: Enabling Scalable, Efficient, and Cost-Effective Graph Processing with Serverless Computing.</a> <span class="font-bold">Yushi Liu</span>, Shixuan Sun, Zijun Li, Quan Chen, Sen Gao, Bingsheng He, Chao Li, Minyi Guo.</li>
 <li><div class="pubtitle">ASPLOS 2022</div> &nbsp;<a href="https://dl.acm.org/doi/abs/10.1145/3503222.3507717">FaaSFlow: Enable Efficient Workflow Execution For Function-as-a-Service.</a> Zijun Li, <span class="font-bold">Yushi Liu</span>, Linsong Guo, Quan Chen, Jiagan Cheng, Wenli Zheng, Minyi Guo.</li>
