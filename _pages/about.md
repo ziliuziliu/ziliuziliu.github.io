@@ -47,7 +47,7 @@ I am now a 2nd year Master student in Computer Science at Shanghai Jiao Tong Uni
 My research interest include serverless and its intersection with large-scale data analytics. My research focuses on leveraging the unique attributes of serverless computing - such as fine-grained resource control, pay-per-use billing, and minimal user effort — to develop efficient, scalable, and cost-effective data analytic systems. My recent project, FaaSGraph, introducing serverless paradigm into graph processing systems, has resulted in significant enhancements in end-to-end performance, memory consumption, and cost efficiency.
 
 # 🔥 News
-- *2024.04*: &nbsp; I will be graduating in 2025. Currently I'm looking for PhD positions. If you are interested, please email me.
+- *2024.04*: I will be graduating in 2025. Currently I'm looking for PhD positions. If you are interested, please email me.
 - *2023.11*: FaaSGraph accepted at ASPLOS'24!
 
 # 📝 Publications 
