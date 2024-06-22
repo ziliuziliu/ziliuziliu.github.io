@@ -67,12 +67,12 @@ My research interest include serverless and its intersection with large-scale da
 - *2022.09 - 2025.03*, Master in Computer Science, Shanghai Jiao Tong University.
 - *2018.09 - 2022.06*, Bachelor in Software Engineering, Shanghai Jiao Tong University. 
 
+# 💻 Internships
+- *2024.06 - 2024.09*, Research Internship, Systems Group, ETH Zurich
+
 <hr>
 <a href="https://info.flagcounter.com/CGCB"><img src="https://s01.flagcounter.com/count2/CGCB/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_10/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 
 <!-- # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
-
-# 💻 Internships
-- *2024.06 - 2024.09*, Research Internship, Systems Group, ETH Zurich
