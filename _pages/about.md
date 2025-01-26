@@ -42,12 +42,14 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am now a 2nd year Master student in Computer Science at Shanghai Jiao Tong University. I am also a research assistant at the <a href="http://epcc.sjtu.edu.cn/">Emerging Parallel Computing Center</a>, supervised by <a href="https://www.cs.sjtu.edu.cn/~chen-quan/">Prof. Quan Chen</a>. Before that, I received my Bachelor degree at Shanghai Jiao Tong University in 2022. 
+I am now a 3rd year Master student in Computer Science at Shanghai Jiao Tong University. I am also a research assistant at the <a href="http://epcc.sjtu.edu.cn/">Emerging Parallel Computing Center</a>, supervised by <a href="https://www.cs.sjtu.edu.cn/~chen-quan/">Prof. Quan Chen</a>. Before that, I received my Bachelor degree at Shanghai Jiao Tong University in 2022. 
 
 My research interest include serverless and its intersection with large-scale data analytics. My research focuses on leveraging the unique attributes of serverless computing - such as fine-grained resource control, pay-per-use billing, and minimal user effort — to develop efficient, scalable, and cost-effective data analytic systems. My recent project, FaaSGraph, introducing serverless paradigm into graph processing systems, has resulted in significant enhancements in end-to-end performance, memory consumption, and cost efficiency.
 
+I will be joining Tencent as part of its top talent program (青云计划).
+
 # 🔥 News
-- *2023.11*: FaaSGraph accepted at ASPLOS'24!
+- *2023.11*: FaaSGraph accepted at ASPLOS'24. 
 
 # 📝 Publications 
 
@@ -61,6 +63,7 @@ My research interest include serverless and its intersection with large-scale da
 - *2021* SJTU MengjiaChenYue Scholarship ($1100).
 - *2023* Optiver China Scholarship ($1400).
 - *2024* ASPLOS'24 Student Travel Fund ($800).
+- *2024* National Scholarship ($2800).
 
 # 📖 Educations
 - *2022.09 - 2025.03*, Master in Computer Science, Shanghai Jiao Tong University.
