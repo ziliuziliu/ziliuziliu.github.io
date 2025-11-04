@@ -42,11 +42,9 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am now a 3rd year Master student in Computer Science at Shanghai Jiao Tong University. I am also a research assistant at the <a href="http://epcc.sjtu.edu.cn/">Emerging Parallel Computing Center</a>, supervised by <a href="https://www.cs.sjtu.edu.cn/~chen-quan/">Prof. Quan Chen</a>. Before that, I received my Bachelor degree at Shanghai Jiao Tong University in 2022. 
+I am currently an engineer at Tencent, broadly focusing on cloud systems and Ray.
 
-My research interest include serverless and its intersection with large-scale data analytics. My research focuses on leveraging the unique attributes of serverless computing - such as fine-grained resource control, pay-per-use billing, and minimal user effort — to develop efficient, scalable, and cost-effective data analytic systems. My recent project, FaaSGraph, introducing serverless paradigm into graph processing systems, has resulted in significant enhancements in end-to-end performance, memory consumption, and cost efficiency.
-
-I will be joining Tencent as part of its top talent program (青云计划).
+I received my Master’s degree from Shanghai Jiao Tong University in 2025, where I was a research assistant at the <a href="http://epcc.sjtu.edu.cn/">Emerging Parallel Computing Center</a>, advised by <a href="https://www.cs.sjtu.edu.cn/~chen-quan/">Prof. Quan Chen</a> and <a href="https://shixuansun.github.io">Prof. Shixuan Sun</a>. My research centered on serverless computing and its intersection with large-scale data analytics. Prior to that, I earned my Bachelor’s degree from Shanghai Jiao Tong University in 2022.
 
 # 🔥 News
 - *2023.11*: FaaSGraph accepted at ASPLOS'24. 
